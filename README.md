@@ -63,6 +63,10 @@ dvc stage add -n train \
                 -d src/train.py -d data/features \
                 -o model.pkl \
                 python src/train.py data/features model.pkl
+dvc stage add -n evaluate \
+  -d src/evaluate.py -d model.pkl -d data/features \
+  -o eval \
+  python src/evaluate.py model.pkl data/features
 ```
 2. git commit after the stages are added.
 
@@ -70,7 +74,6 @@ dvc stage add -n train \
 git add dvc.yaml data/.gitignore
 dvc config core.autostage true
 ```
-
 ## Step4 (dvc): Reproduce the stages 
 
 1. using dvc to reproduce the pipeline taking the params.yaml as input
@@ -81,6 +84,8 @@ dvc repro
 ```
 git add dvc.lock && git commit -m "first pipeline repro"
 ```
+
+## Step5 (dvc): Generate 
 # Reference:
 
 https://dvc.org/doc/install/macos
