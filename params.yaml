@@ -3,11 +3,11 @@ prepare:
   seed: 20170428
 
 featurize:
-  max_features: 100
+  max_features: 10
   ngrams: 1
 
 train:
   seed: 20170428
   n_est: 50
-  min_split: 0.01
+  min_split: 0.03
 
