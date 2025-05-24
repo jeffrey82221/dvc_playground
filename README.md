@@ -55,6 +55,12 @@ dvc stage add -n featurize \
                 -d src/featurization.py -d data/prepared \
                 -o data/features \
                 python src/featurization.py data/prepared data/features
+
+dvc stage add -n train \
+                -p train.seed,train.n_est,train.min_split \
+                -d src/train.py -d data/features \
+                -o model.pkl \
+                python src/train.py data/features model.pkl
 ```
 ## Step4 (dvc): Allow git to track the change 
 
