@@ -90,6 +90,12 @@ git add dvc.lock && git commit -m "first pipeline repro"
 ```
 dvc dag
 ```
+
+## Step6 (dvc): Visualizing DVC evaluation scores
+
+```
+dvc metrics show
+```
 # Reference:
 
 https://dvc.org/doc/install/macos
