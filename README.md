@@ -50,6 +50,12 @@ dvc stage add -n prepare \
                 -o data/prepared \
                 python src/prepare.py data/data.xml
 ```
+## Step4 (dvc): Allow git to track the change 
+
+```
+git add dvc.yaml data/.gitignore
+dvc config core.autostage true
+```
 # Reference:
 
 https://dvc.org/doc/install/macos
