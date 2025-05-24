@@ -43,6 +43,8 @@ dvc add data/data.xml
 Note: make sure data/data.xml is in .gitignore
 
 ## Step3 (dvc): Add stage to dvc
+
+1. Add the three stages to dvc
 ```
 dvc stage add -n prepare \
                 -p prepare.seed,prepare.split \
@@ -62,11 +64,22 @@ dvc stage add -n train \
                 -o model.pkl \
                 python src/train.py data/features model.pkl
 ```
-## Step4 (dvc): Allow git to track the change 
+2. git commit after the stages are added.
 
 ```
 git add dvc.yaml data/.gitignore
 dvc config core.autostage true
+```
+
+## Step4 (dvc): Reproduce the stages 
+
+1. using dvc to reproduce the pipeline taking the params.yaml as input
+```
+dvc repro
+```
+2. commit the lock file to git
+```
+git add dvc.lock && git commit -m "first pipeline repro"
 ```
 # Reference:
 
