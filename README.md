@@ -93,9 +93,32 @@ dvc dag
 
 ## Step6 (dvc): Visualizing DVC evaluation scores
 
-```
+1. Showing the metrics of current reproduced experiment 
+
+```bash
 dvc metrics show
 ```
+
+2. Showing the metrics difference between the current and previous experiment
+```bash
+dvc metrics diff
+```
+
+3. Visualizing the evaluation plots 
+
+```bash
+dvc plots show
+```
+=> This will generate a dvc_plots/index.html 
+
+4. Comparing the evaluation plots for both the current and previous experiment
+
+```bash
+dvc plots diff
+```
+
+=> This will generate a dvc_plots/index.html with diagrams from both experiments
+
 # Reference:
 
 https://dvc.org/doc/install/macos
