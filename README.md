@@ -4,6 +4,10 @@ Understand the usage of DVC and try to build an experiment platform from it
 # Goal 
 
 - [ ] Work though the tutorial
+  - [X] Data Pipeline Versioning and Reproducing
+  - [X] Experiment Tracking and Evaluation
+  - [ ] Experimenting using Pipelines https://dvc.org/doc/start/experiments/experiment-pipelines
+  - [ ] Model Registry
 - [ ] Understand the usage of DVC python API package.
 
 
@@ -118,6 +122,12 @@ dvc plots diff
 ```
 
 => This will generate a dvc_plots/index.html with diagrams from both experiments
+
+5. Comparing performance on all experiments
+
+```
+dvc exp show
+```
 
 # Reference:
 
