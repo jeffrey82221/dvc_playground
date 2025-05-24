@@ -85,7 +85,11 @@ dvc repro
 git add dvc.lock && git commit -m "first pipeline repro"
 ```
 
-## Step5 (dvc): Generate 
+## Step5 (dvc): Visualizing DVC pipeline DAG
+
+```
+dvc dag
+```
 # Reference:
 
 https://dvc.org/doc/install/macos

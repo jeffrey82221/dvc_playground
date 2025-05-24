@@ -2,5 +2,5 @@ venv
 data/*.xml
 data/*.pkl
 data/*.tsv
-/model.pkl
+/*.pkl
 /eval
