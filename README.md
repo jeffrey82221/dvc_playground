@@ -6,7 +6,7 @@ Understand the usage of DVC and try to build an experiment platform from it
 - [ ] Work though the tutorial
   - [X] Data Pipeline Versioning and Reproducing
   - [X] Experiment Tracking and Evaluation
-  - [ ] Experimenting using Pipelines https://dvc.org/doc/start/experiments/experiment-pipelines
+  - [ ] Experimenting using Pipelines [Reference](https://github.com/jeffrey82221/dvc_exp_playground) 
   - [ ] Model Registry
 - [ ] Understand the usage of DVC python API package.
 
