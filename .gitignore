@@ -1,2 +1,4 @@
 venv
-data/data.xml
+data/*.xml
+data/*.pkl
+data/*.tsv

@@ -23,13 +23,13 @@ virtualenv venv && echo "venv" > .gitignore
 source venv/bin/activate
 pip install -r src/requirements.txt
 ```
-## Step2 (dvc): init dvc repo
+## Step1 (dvc): init dvc repo
 
 ```
 dvc init
 ```
 
-## Step3 (dvc): add input data to dvc
+## Step2 (dvc): add input data to dvc
 
 1. If no input data, pull data from data registry
 ```
@@ -42,8 +42,14 @@ dvc add data/data.xml
 ```
 Note: make sure data/data.xml is in .gitignore
 
-
-
+## Step3 (dvc): Add stage to dvc
+```
+dvc stage add -n prepare \
+                -p prepare.seed,prepare.split \
+                -d src/prepare.py -d data/data.xml \
+                -o data/prepared \
+                python src/prepare.py data/data.xml
+```
 # Reference:
 
 https://dvc.org/doc/install/macos
