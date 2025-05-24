@@ -49,6 +49,12 @@ dvc stage add -n prepare \
                 -d src/prepare.py -d data/data.xml \
                 -o data/prepared \
                 python src/prepare.py data/data.xml
+
+dvc stage add -n featurize \
+                -p featurize.max_features,featurize.ngrams \
+                -d src/featurization.py -d data/prepared \
+                -o data/features \
+                python src/featurization.py data/prepared data/features
 ```
 ## Step4 (dvc): Allow git to track the change 
 
