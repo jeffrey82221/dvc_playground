@@ -113,7 +113,7 @@ dvc metrics diff
 ```bash
 dvc plots show
 ```
-=> This will generate a dvc_plots/index.html 
+* NOTE: This will generate a dvc_plots/index.html 
 
 4. Comparing the evaluation plots for both the current and previous experiment
 
@@ -121,7 +121,7 @@ dvc plots show
 dvc plots diff
 ```
 
-=> This will generate a dvc_plots/index.html with diagrams from both experiments
+* NOTE: This will generate a dvc_plots/index.html with diagrams from both experiments
 
 5. Comparing performance on all experiments
 
