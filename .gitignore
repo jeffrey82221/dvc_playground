@@ -1,6 +1,6 @@
 .DS_Store
 venv
-data/*.xml
+data/data.xml
 data/*.pkl
 data/*.tsv
 /*.pkl
