@@ -128,7 +128,13 @@ dvc plots diff
 ```
 dvc exp show
 ```
+## Step7 (dvc): Hyperparameter tuning:
 
+```
+dvc exp run --name "feature_tune" --queue \
+-S 'featurize.max_features=20,40,60,80'
+dvc queue start -j 1 -vv
+```
 # Reference:
 
 https://dvc.org/doc/install/macos
