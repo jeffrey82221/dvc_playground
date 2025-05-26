@@ -1,3 +1,4 @@
+dvc
 dvclive>=3.0
 pandas
 pyaml
